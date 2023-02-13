@@ -1,0 +1,14 @@
+---
+- name: This playbook creates dir
+  hosts: all
+  become: false
+  tasks:
+  - name: Creating Directory
+    file:
+      path: /home/ansadmin/dir1
+      state: directory
+        
+  - name: Deleting created Directory
+    file:
+      path: /home/ansadmin/dir1
+      state: absent    

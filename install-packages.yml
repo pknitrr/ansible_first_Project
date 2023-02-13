@@ -1,0 +1,9 @@
+---
+- name: This playbook will install packages on target nodes
+  hosts: rhel aws
+  become: True
+  tasks:
+  - name: install tree packages
+    yum:
+      name: tree
+      state: installed

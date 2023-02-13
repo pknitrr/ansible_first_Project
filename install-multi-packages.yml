@@ -1,0 +1,9 @@
+---
+- name: This playbook will install packages on target nodes
+  hosts: all
+  become: True
+  tasks:
+  - name: install packages
+    yum:
+      name: ['tree', 'make','gzip','wget','telnet']
+      state: installed
